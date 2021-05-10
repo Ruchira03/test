@@ -10,7 +10,7 @@ function App() {
   const senddata = () => {
     console.log(name + " " + email);
     axios
-      .post(API + "/getuser", {
+      .post(API + "getuser", {
         name: name,
         email: email,
       })
@@ -21,8 +21,9 @@ function App() {
   };
 
   const getdata = () => {
-    axios.get(API + "/giveuser", {}).then((res) => {
+    axios.get(API + "giveuser", {}).then((res) => {
       console.log(res.data);
+      alert("sucess");
       setdetails_list(res.data);
     });
   };
